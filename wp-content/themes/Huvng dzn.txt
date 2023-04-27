@@ -1,0 +1,13 @@
+Chúng tôi có sử dụng 1 plugin duy nhất là Advanced Custom Field Pro Phiên bản mới nhất ở thời điểm hiện tại.
+
+1. Chép plugin advanced-custom-fiedls-pro vào thư mục -> plugin.
+2. Chép theme vào thư mục themes.
+3. Sửa đổi file function.php trong thư mục theme, thành tên miền của bạn.
+update_option('siteurl','http://yourdomain.com');
+update_option('home','http://yourdomain.com');
+4. Vào wp-admin (/wp-admin/options-permalink.php) lấy mod-rewrite, tạo file .htaccess ngang hàng với index.php, wp-admin, wp-content ...
+5. Chép thư mục uploads ghi đè lên thư mục uploads wp-content -> uploads.
+
+
+
+CREATE USER 'calista'@'localhost' IDENTIFIED BY 'Calista@13^';
