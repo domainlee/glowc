@@ -188,9 +188,9 @@ a:hover {
         background: #EEC587;
     }
     .head__logo {
-        margin: 15px 0;
+        margin: 10px 0 15px 0;
         img {
-            width: 100px;
+            width: 200px;
         }
     }
     .head__nav {
@@ -348,7 +348,7 @@ a:hover {
         background-size: cover;
         background-position: center;
         .hero__content {
-            padding: 0 0 15%;
+            padding: 0 0 5%;
             display: flex;
             justify-content: center;
             align-items: flex-end;

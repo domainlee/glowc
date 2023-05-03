@@ -58,7 +58,7 @@
         </div>
     </div>
     <div class="footer__copywriter">
-        © Bản quyền thuộc về Công ty cổ phần tư vấn thiết kế kiến trúc và nội thất A&I
+        © Bản quyền thuộc về TNHH Dạ Lan
     </div>
 </footer>
 

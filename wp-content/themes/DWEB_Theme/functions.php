@@ -1042,858 +1042,858 @@ function get_number($string) {
     return (int)str_replace('.', '', $string);
 }
 
-//function san_pham_func() {
-//    $labels = array(
-//        'name'                  => _x( 'Sản phẩm', 'Post Type General Name', 'DWEB' ),
-//        'singular_name'         => _x( 'Sản phẩm', 'Post Type Singular Name', 'DWEB' ),
-//        'menu_name'             => __( 'Sản phẩm', 'DWEB' ),
-//        'name_admin_bar'        => __( 'Sản phẩm', 'DWEB' ),
-//        'archives'              => __( 'Item Archives', 'DWEB' ),
-//        'attributes'            => __( 'Item Attributes', 'DWEB' ),
-//        'parent_item_colon'     => __( 'Parent Item:', 'DWEB' ),
-//        'all_items'             => __( 'Tất cả sản phẩm', 'DWEB' ),
-//        'add_new_item'          => __( 'Add New Item', 'DWEB' ),
-//        'add_new'               => __( 'Thêm sản phẩm', 'DWEB' ),
-//        'new_item'              => __( 'New Item', 'DWEB' ),
-//        'edit_item'             => __( 'Edit Item', 'DWEB' ),
-//        'update_item'           => __( 'Update Item', 'DWEB' ),
-//        'view_item'             => __( 'View Item', 'DWEB' ),
-//        'view_items'            => __( 'View Items', 'DWEB' ),
-//        'search_items'          => __( 'Search Item', 'DWEB' ),
-//        'not_found'             => __( 'Not found', 'DWEB' ),
-//        'not_found_in_trash'    => __( 'Not found in Trash', 'DWEB' ),
-//        'featured_image'        => __( 'Featured Image', 'DWEB' ),
-//        'set_featured_image'    => __( 'Set featured image', 'DWEB' ),
-//        'remove_featured_image' => __( 'Remove featured image', 'DWEB' ),
-//        'use_featured_image'    => __( 'Use as featured image', 'DWEB' ),
-//        'uploaded_to_this_item' => __( 'Uploaded to this item', 'DWEB' ),
-//        'items_list'            => __( 'Items list', 'DWEB' ),
-//        'items_list_navigation' => __( 'Items list navigation', 'DWEB' ),
-//        'filter_items_list'     => __( 'Filter items list', 'DWEB' ),
-//    );
-//    $rewrite = array(
-//        'slug'                  => _x('product/%danhmuc_sanpham%','slug', 'DWEB'), //Slug của trang chi tiết sản phẩm
-//        'with_front'            => true,
-//        'pages'                 => true,
-//        'feeds'                 => true,
-//    );
-//    $args = array(
-//        'label'                 => __( 'Sản phẩm', 'DWEB' ),
-//        'description'           => __( 'Post Type Description', 'DWEB' ),
-//        'labels'                => $labels,
-//        'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', ),
-//        'taxonomies'            => array( 'danhmuc_sanpham' ),
-//        'hierarchical'          => false,
-//        'public'                => true,
-//        'show_ui'               => true,
-//        'show_in_menu'          => true,
-//        'menu_position'         => 20,
-//        'menu_icon'             => 'dashicons-products',
-//        'show_in_admin_bar'     => true,
-//        'show_in_nav_menus'     => true,
-//        'can_export'            => true,
-//        'has_archive'           => 'product', //Đường dẫn của archive
-//        'exclude_from_search'   => false,
-//        'publicly_queryable'    => true,
-//        'rewrite'               => $rewrite,
-//        'capability_type'       => 'page',
-//    );
-//    register_post_type( 'san_pham', $args );
-//}
-//add_action( 'init', 'san_pham_func', 0 );
-//function danhmuc_sanpham_func() {
-//    $labels = array(
-//        'name'                       => _x( 'Danh mục', 'Taxonomy General Name', 'DWEB' ),
-//        'singular_name'              => _x( 'Danh mục', 'Taxonomy Singular Name', 'DWEB' ),
-//        'menu_name'                  => __( 'Danh mục', 'DWEB' ),
-//        'all_items'                  => __( 'All Items', 'DWEB' ),
-//        'parent_item'                => __( 'Parent Item', 'DWEB' ),
-//        'parent_item_colon'          => __( 'Parent Item:', 'DWEB' ),
-//        'new_item_name'              => __( 'New Item Name', 'DWEB' ),
-//        'add_new_item'               => __( 'Add New Item', 'DWEB' ),
-//        'edit_item'                  => __( 'Edit Item', 'DWEB' ),
-//        'update_item'                => __( 'Update Item', 'DWEB' ),
-//        'view_item'                  => __( 'View Item', 'DWEB' ),
-//        'separate_items_with_commas' => __( 'Separate items with commas', 'DWEB' ),
-//        'add_or_remove_items'        => __( 'Add or remove items', 'DWEB' ),
-//        'choose_from_most_used'      => __( 'Choose from the most used', 'DWEB' ),
-//        'popular_items'              => __( 'Popular Items', 'DWEB' ),
-//        'search_items'               => __( 'Search Items', 'DWEB' ),
-//        'not_found'                  => __( 'Not Found', 'DWEB' ),
-//        'no_terms'                   => __( 'No items', 'DWEB' ),
-//        'items_list'                 => __( 'Items list', 'DWEB' ),
-//        'items_list_navigation'      => __( 'Items list navigation', 'DWEB' ),
-//    );
-//    $rewrite = array(
-//        'slug'                       => _x('product','slug', 'DWEB'),
-//        'with_front'                 => true,
-//        'hierarchical'               => true,
-//    );
-//    $args = array(
-//        'labels'                     => $labels,
-//        'hierarchical'               => true,
-//        'public'                     => true,
-//        'show_ui'                    => true,
-//        'show_admin_column'          => true,
-//        'show_in_nav_menus'          => true,
-//        'show_tagcloud'              => true,
-//        'rewrite'                    => $rewrite,
-//    );
-//    register_taxonomy( 'danhmuc_sanpham', array( 'san_pham' ), $args );
-//}
-//add_action( 'init', 'danhmuc_sanpham_func', 0 );
-//
-//function thuonghieu_sanpham_func() {
-//    $labels = array(
-//        'name'                       => _x( 'Thương hiệu', 'Taxonomy General Name', 'DWEB' ),
-//        'singular_name'              => _x( 'Thương hiệu', 'Taxonomy Singular Name', 'DWEB' ),
-//        'menu_name'                  => __( 'Thương hiệu', 'DWEB' ),
-//        'all_items'                  => __( 'All Items', 'DWEB' ),
-//        'parent_item'                => __( 'Parent Item', 'DWEB' ),
-//        'parent_item_colon'          => __( 'Parent Item:', 'DWEB' ),
-//        'new_item_name'              => __( 'New Item Name', 'DWEB' ),
-//        'add_new_item'               => __( 'Add New Item', 'DWEB' ),
-//        'edit_item'                  => __( 'Edit Item', 'DWEB' ),
-//        'update_item'                => __( 'Update Item', 'DWEB' ),
-//        'view_item'                  => __( 'View Item', 'DWEB' ),
-//        'separate_items_with_commas' => __( 'Separate items with commas', 'DWEB' ),
-//        'add_or_remove_items'        => __( 'Add or remove items', 'DWEB' ),
-//        'choose_from_most_used'      => __( 'Choose from the most used', 'DWEB' ),
-//        'popular_items'              => __( 'Popular Items', 'DWEB' ),
-//        'search_items'               => __( 'Search Items', 'DWEB' ),
-//        'not_found'                  => __( 'Not Found', 'DWEB' ),
-//        'no_terms'                   => __( 'No items', 'DWEB' ),
-//        'items_list'                 => __( 'Items list', 'DWEB' ),
-//        'items_list_navigation'      => __( 'Items list navigation', 'DWEB' ),
-//    );
-//    $rewrite = array(
-//        'slug'                       => _x('product','slug', 'DWEB'),
-//        'with_front'                 => true,
-//        'hierarchical'               => true,
-//    );
-//    $args = array(
-//        'labels'                     => $labels,
-//        'hierarchical'               => true,
-//        'public'                     => true,
-//        'show_ui'                    => true,
-//        'show_admin_column'          => true,
-//        'show_in_nav_menus'          => true,
-//        'show_tagcloud'              => true,
-//        'rewrite'                    => $rewrite,
-//    );
-//    register_taxonomy( 'thuonghieu_sanpham', array( 'san_pham' ), $args );
-//}
-//add_action( 'init', 'thuonghieu_sanpham_func', 0 );
-//
-//
-//function tag_sanpham_func() {
-//    $labels = array(
-//        'name'                       => _x( 'Thẻ', 'Taxonomy General Name', 'DWEB' ),
-//        'singular_name'              => _x( 'Thẻ', 'Taxonomy Singular Name', 'DWEB' ),
-//        'menu_name'                  => __( 'Thẻ', 'DWEB' ),
-//        'all_items'                  => __( 'All Items', 'DWEB' ),
-//        'parent_item'                => __( 'Parent Item', 'DWEB' ),
-//        'parent_item_colon'          => __( 'Parent Item:', 'DWEB' ),
-//        'new_item_name'              => __( 'New Item Name', 'DWEB' ),
-//        'add_new_item'               => __( 'Add New Item', 'DWEB' ),
-//        'edit_item'                  => __( 'Edit Item', 'DWEB' ),
-//        'update_item'                => __( 'Update Item', 'DWEB' ),
-//        'view_item'                  => __( 'View Item', 'DWEB' ),
-//        'separate_items_with_commas' => __( 'Separate items with commas', 'DWEB' ),
-//        'add_or_remove_items'        => __( 'Add or remove items', 'DWEB' ),
-//        'choose_from_most_used'      => __( 'Choose from the most used', 'DWEB' ),
-//        'popular_items'              => __( 'Popular Items', 'DWEB' ),
-//        'search_items'               => __( 'Search Items', 'DWEB' ),
-//        'not_found'                  => __( 'Not Found', 'DWEB' ),
-//        'no_terms'                   => __( 'No items', 'DWEB' ),
-//        'items_list'                 => __( 'Items list', 'DWEB' ),
-//        'items_list_navigation'      => __( 'Items list navigation', 'DWEB' ),
-//    );
-//    $rewrite = array(
-//        'slug'                       => _x('tags','slug', 'DWEB'),
-//        'with_front'                 => true,
-//        'hierarchical'               => true,
-//    );
-//    $args = array(
-//        'labels'                     => $labels,
-//        'hierarchical'               => false,
-//        'public'                     => true,
-//        'show_ui'                    => true,
-//        'show_admin_column'          => true,
-//        'show_in_nav_menus'          => true,
-//        'show_tagcloud'              => true,
-//        'rewrite'                    => $rewrite,
-//    );
-//    register_taxonomy( 'tag_sanpham', array( 'san_pham' ), $args );
-//}
-//add_action( 'init', 'tag_sanpham_func', 0 );
-//
-//
-//function dweb_cpt_product_post_type_link( $permalink, $post ) {
-//    if ( 'san_pham' !== $post->post_type ) {
-//        return $permalink;
-//    }
-//    if ( false === strpos( $permalink, '%' ) ) {
-//        return $permalink;
-//    }
-//    $terms = get_the_terms( $post->ID, 'danhmuc_sanpham' );
-//
-//    if ( ! empty( $terms ) ) {
-//        if ( function_exists( 'wp_list_sort' ) ) {
-//            $terms = wp_list_sort( $terms, 'term_id', 'DESC' );
-//        } else {
-//            usort( $terms, '_usort_terms_by_ID' );
-//        }
-//        $category_object = apply_filters( 'dweb_cpt_product_post_type_link_product_cat', $terms[0], $terms, $post );
-//        $category_object = get_term( $category_object, 'danhmuc_sanpham' );
-//        $product_cat     = $category_object->slug;
-//        if ( $category_object->parent ) {
-//            $ancestors = get_ancestors( $category_object->term_id, 'danhmuc_sanpham' );
-////            print_r($ancestors);
-//            foreach ( $ancestors as $ancestor ) {
-//                $ancestor_object = get_term( $ancestor, 'danhmuc_sanpham' );
-//                $product_cat     = $ancestor_object->slug . '/' . $product_cat;
-//            }
-//
-//        }
-//    } else {
-//        $product_cat = _x( 'none-category', 'slug', 'devvn' );
-//    }
-//
-//    $permalink = str_replace( '%danhmuc_sanpham%', $product_cat, $permalink );
-//
-//    return $permalink;
-//}
-//add_filter( 'post_type_link', 'dweb_cpt_product_post_type_link', 10, 2 );
-//
-//function dweb_cpt_product_category_base_same_shop_base( $flash = false ) {
-//    $terms = get_terms(array(
-//        'taxonomy' => 'danhmuc_sanpham',
-//        'hide_empty' => false,
-//    ));
-//    if ($terms && !is_wp_error($terms)) {
-//        $siteurl = esc_url(home_url('/'));
-//        foreach ($terms as $term) {
-//            $term_slug = $term->slug;
-//            $baseterm = str_replace($siteurl, '', get_term_link($term->term_id, 'danhmuc_sanpham'));
-//
-//            add_rewrite_rule($baseterm . '?$','index.php?danhmuc_sanpham=' . $term_slug,'top');
-//            add_rewrite_rule($baseterm . 'page/([0-9]{1,})/?$', 'index.php?danhmuc_sanpham=' . $term_slug . '&paged=$matches[1]','top');
-//            add_rewrite_rule($baseterm . '(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', 'index.php?danhmuc_sanpham=' . $term_slug . '&feed=$matches[1]','top');
-//        }
-//    }
-//    if ($flash == true)
-//        flush_rewrite_rules(false);
-//}
-//add_filter( 'init', 'dweb_cpt_product_category_base_same_shop_base');
-//
-//function na_remove_slug( $post_link, $post, $leavename ) {
-//
-//    if ( 'san_pham' != $post->post_type ||  'publish' != $post->post_status ) {
-//        return $post_link;
-//    }
-//
-//    $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
-//    return $post_link;
-//}
-//add_filter( 'post_type_link', 'na_remove_slug', 10, 3 );
-//
-//function na_parse_request( $query ) {
-//
-//    if ( ! $query->is_main_query() || 2 != count( $query->query ) || ! isset( $query->query['page'] ) ) {
-//        return;
-//    }
-//    if ( ! empty( $query->query['name'] ) ) {
-//        $query->set( 'post_type', array( 'post', 'san_pham', 'page' ) );
-//    }
-//}
-//add_action( 'pre_get_posts', 'na_parse_request' );
-//
-//
-//function devvn_remove_slug( $post_link, $post ) {
-//    if ( !in_array( get_post_type($post), array( 'san_pham' ) ) || 'publish' != $post->post_status ) {
-//        return $post_link;
-//    }
-//    if('san_pham' == $post->post_type){
-//        $post_link = str_replace( '/product/', '/', $post_link ); //Thay cua-hang bằng slug hiện tại của bạn
-//    } else {
-//        $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
-//    }
-//
-//    return $post_link;
-//}
-//add_filter( 'post_type_link', 'devvn_remove_slug', 10, 2 );
-//function devvn_woo_product_rewrite_rules($flash = false) {
-//    global $wp_post_types, $wpdb, $wp;
-//    $siteLink = esc_url(home_url('/'));
-//    foreach ($wp_post_types as $type=>$custom_post) {
-//        if($type == 'san_pham'){
-//            if ($custom_post->_builtin == false) {
-//                $querystr = "SELECT {$wpdb->posts}.post_name, {$wpdb->posts}.ID
-//                            FROM {$wpdb->posts}
-//                            WHERE {$wpdb->posts}.post_status = 'publish'
-//                            AND {$wpdb->posts}.post_type = '{$type}'";
-//                $posts = $wpdb->get_results($querystr, OBJECT);
-//                foreach ($posts as $post) {
-//                    $current_slug = get_permalink($post->ID);
-//                    $base_product = str_replace($siteLink,'',$current_slug);
-//
-//
-//                    $currentUrl = array_reverse(explode('/', $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'/'));
-//                    $baseUrl = array_reverse(explode('/', $base_product));
-//
-//                    add_rewrite_rule($base_product.'?$', "index.php?{$custom_post->query_var}={$post->post_name}", 'top');
-//                    add_rewrite_rule($base_product.'comment-page-([0-9]{1,})/?$', 'index.php?'.$custom_post->query_var.'='.$post->post_name.'&cpage=$matches[1]', 'top');
-//                    add_rewrite_rule($base_product.'(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', 'index.php?'.$custom_post->query_var.'='.$post->post_name.'&feed=$matches[1]','top');
-//                }
-//            }
-//        }
-//    }
-//    if ($flash == true)
-//        flush_rewrite_rules(false);
-//}
-//add_action('init', 'devvn_woo_product_rewrite_rules');
-//function devvn_woo_new_product_post_save($post_id){
-//    global $wp_post_types;
-//    $post_type = get_post_type($post_id);
-//    foreach ($wp_post_types as $type=>$custom_post) {
-//        if ($custom_post->_builtin == false && $type == $post_type) {
-//            devvn_woo_product_rewrite_rules(true);
-//        }
-//    }
-//}
-//add_action('wp_insert_post', 'devvn_woo_new_product_post_save');
-//
-//add_filter( 'term_link', 'devvn_product_cat_permalink', 10, 3 );
-//function devvn_product_cat_permalink( $url, $term, $taxonomy ){
-//    switch ($taxonomy):
-//        case 'danhmuc_sanpham':
-//            $taxonomy_slug = 'product'; //Thay bằng slug hiện tại của bạn. Mặc định là product-category
-//            if(strpos($url, $taxonomy_slug) === FALSE) break;
-//            $url = str_replace('/' . $taxonomy_slug, '', $url);
-//            break;
-//        case 'thuonghieu_sanpham':
-//            $taxonomy_slug = 'product'; //Thay bằng slug hiện tại của bạn. Mặc định là product-category
-//            if(strpos($url, $taxonomy_slug) === FALSE) break;
-//            $url = str_replace('/' . $taxonomy_slug, '', $url);
-//            break;
-//    endswitch;
-//    return $url;
-//}
-//function devvn_product_category_rewrite_rules($flash = false) {
-//    $terms = get_terms( array(
-//        'taxonomy' => 'danhmuc_sanpham',
-//        'post_type' => 'san_pham',
-//        'hide_empty' => false,
-//    ));
-//    if($terms && !is_wp_error($terms)){
-//        $siteurl = esc_url(home_url('/'));
-//        foreach ($terms as $term) {
-//            $term_slug = $term->slug;
-//            $baseterm = str_replace($siteurl,'',get_term_link($term->term_id,'danhmuc_sanpham'));
-////            $baseterm = rtrim($baseterm, '/');
-////            echo $baseterm;
-////            echo '<br/>';
-//
-//            add_rewrite_rule($baseterm.'?$','index.php?danhmuc_sanpham='.$term_slug,'top');
-//            add_rewrite_rule($baseterm.'page/([0-9]{1,})/?$', 'index.php?danhmuc_sanpham='.$term_slug.'&paged=$matches[1]','top');
-//////            add_rewrite_rule($baseterm.'?price/([0-9a-z-]{1,})?$', 'index.php?danhmuc_sanpham='.$term_slug.'&price=$matches[1]','top');
-//////            add_rewrite_rule($baseterm.'?color/([0-9-]{1,})?$', 'index.php?danhmuc_sanpham='.$term_slug.'&color=$matches[1]','top');
-//////            add_rewrite_rule($baseterm.'?color/([0-9-]{1,})?$', 'index.php?danhmuc_sanpham='.$term_slug.'&color=$matches[1]','top');
-//////            add_rewrite_rule($baseterm.'filter/?price=([0-9a-z-]{1,})&color=([0-9-]{1,})?$', 'index.php?danhmuc_sanpham='.$term_slug.'&price=$matches[1]&color=$matches[2]','top');
-////            add_rewrite_rule($baseterm.'filter/([0-9a-z-]{1,})/page/([0-9]{1,})/?$', 'index.php?danhmuc_sanpham='.$term_slug.'&price=$matches[1]&paged=$matches[2]','top');
-//            add_rewrite_rule($baseterm.'(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', 'index.php?product_cat='.$term_slug.'&feed=$matches[1]','top');
-//
-//        }
-//    }
-//    if ($flash == true)
-//        flush_rewrite_rules(false);
-//}
-//add_action('init', 'devvn_product_category_rewrite_rules');
-//add_action( 'create_term', 'devvn_new_product_cat_edit_success', 10, 2 );
-//function devvn_new_product_cat_edit_success( $term_id, $taxonomy ) {
-//    devvn_product_category_rewrite_rules(true);
-//}
-//function devvn_product_brand_rewrite_rules($flash = false) {
-//
-//    $terms = get_terms( array(
-//        'taxonomy' => 'thuonghieu_sanpham',
-//        'post_type' => 'san_pham',
-//        'hide_empty' => false,
-//    ));
-//
-//    if($terms && !is_wp_error($terms)){
-//        $siteurl = esc_url(home_url('/'));
-//        foreach ($terms as $term) {
-//            $term_slug = $term->slug;
-//            $baseterm = str_replace($siteurl,'',get_term_link($term->term_id,'thuonghieu_sanpham'));
-//
-//            add_rewrite_rule($baseterm.'?$','index.php?thuonghieu_sanpham='.$term_slug,'top');
-//            add_rewrite_rule($baseterm.'page/([0-9]{1,})/?$', 'index.php?thuonghieu_sanpham='.$term_slug.'&paged=$matches[1]','top');
-//            add_rewrite_rule($baseterm.'filter/([0-9a-z-]{1,})/([0-9]{1,})/?$', 'index.php?thuonghieu_sanpham='.$term_slug.'&price=$matches[1]','top');
-//            add_rewrite_rule($baseterm.'filter/([0-9a-z-]{1,})/page/([0-9]{1,})/?$', 'index.php?thuonghieu_sanpham='.$term_slug.'&price=$matches[1]&paged=$matches[2]','top');
-//            add_rewrite_rule($baseterm.'(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', 'index.php?product_cat='.$term_slug.'&feed=$matches[1]','top');
-//        }
-//    }
-//
-//    if ($flash == true)
-//        flush_rewrite_rules(false);
-//}
-//add_action('init', 'devvn_product_brand_rewrite_rules');
-//add_action( 'create_term', 'devvn_new_product_brand_edit_success', 10, 2 );
-//function devvn_new_product_brand_edit_success( $term_id, $taxonomy ) {
-//    devvn_product_brand_rewrite_rules(true);
-//}
-//
-//
-//function devvn_product_tag_rewrite_rules($flash = false) {
-//    $terms = get_terms( array(
-//        'taxonomy' => 'tag_sanpham',
-//        'post_type' => 'san_pham',
-//        'hide_empty' => false,
-//    ));
-//    if($terms && !is_wp_error($terms)){
-//        $siteurl = esc_url(home_url('/'));
-//        foreach ($terms as $term) {
-//            $term_slug = $term->slug;
-//            $baseterm = str_replace($siteurl,'',get_term_link($term->term_id,'tag_sanpham'));
-//            add_rewrite_rule($baseterm.'?$','index.php?tag_sanpham='.$term_slug,'top');
-//            add_rewrite_rule($baseterm.'page/([0-9]{1,})/?$', 'index.php?tag_sanpham='.$term_slug.'&paged=$matches[1]','top');
-//            add_rewrite_rule($baseterm.'([0-9a-z-]{1,})?$', 'index.php?tag_sanpham='.$term_slug.'&price=$matches[1]','top');
-//            add_rewrite_rule($baseterm.'([0-9a-z-]{1,})/page/([0-9]{1,})/?$', 'index.php?tag_sanpham='.$term_slug.'&price=$matches[1]&paged=$matches[2]','top');
-//            add_rewrite_rule($baseterm.'(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', 'index.php?product_cat='.$term_slug.'&feed=$matches[1]','top');
-//        }
-//    }
-//    if ($flash == true)
-//        flush_rewrite_rules(false);
-//}
-//add_action('init', 'devvn_product_tag_rewrite_rules');
-//add_action( 'create_term', 'devvn_new_product_tag_edit_success', 10, 2 );
-//function devvn_new_product_tag_edit_success( $term_id, $taxonomy ) {
-//    devvn_product_tag_rewrite_rules(true);
-//}
-//
-//function add_slug( $query_var ) {
-//    $query_var[] = 'paged';
-//    $query_var[] = 'price';
-//    $query_var[] = 'size';
-//    $query_var[] = 'color';
-//    $query_var[] = 'sort';
-//    $query_var[] = 'material';
-//    $query_var[] = 'gift';
-//    return $query_var;
-//}
-//add_filter( 'query_vars', 'add_slug' );
-//
-//add_action( 'pre_get_posts', 'price_search_filter');
-//
-//function price_search_filter( $query ) {
-//    if ((!is_admin() && is_tax('danhmuc_sanpham') && $query->is_main_query()) || (!is_admin() && is_tax('thuonghieu_sanpham') && $query->is_main_query()) ) {
-//
-//        $price = get_query_var('price');
-//        $sort = get_query_var('sort');
-//        $size = get_query_var('size');
-//        $material = get_query_var('material');
-//        $color = get_query_var('color');
-//        $gift = get_query_var('gift');
-//
-//        $priceArray = explode('-',$price);
-//        $count = count($priceArray);
-//
-//        $sortArray = explode('-',$sort);
-//        $countSort = count($sortArray);
-//
-//        if($gift) {
-//            $meta_query[] = array(
-//                'key' => 'product_gift',
-//                'value' => $gift,
-//                'compare' => 'LIKE',
-//            );
-//            $query->set('meta_query', $meta_query);
-//        }
-//
-//        if($color) {
-//            $meta_query[] = array(
-//                'key' => 'product_color',
-//                'value' => $color,
-//                'compare' => 'LIKE',
-//            );
-//            $query->set('meta_query', $meta_query);
-//        }
-//
-//        if($size) {
-//            $meta_query[] = array(
-//                'key' => 'product_size',
-//                'value' => $size,
-//                'compare' => 'LIKE',
-//            );
-//            $query->set('meta_query', $meta_query);
-//        }
-//
-//        if($material) {
-//            $meta_query[] = array(
-//                'key' => 'product_material',
-//                'value' => $material,
-//                'compare' => 'LIKE',
-//            );
-//            $query->set('meta_query', $meta_query);
-//        }
-//
-//        if($count == 1 && (int)$priceArray[0]) {
-//            $meta_query[] = array(
-//                'key' => 'post_detail_price',
-//                'value' => (int)$priceArray[0],
-//                'compare' => '>=',
-//                'type'      => 'NUMERIC',
-//            );
-//            $query->set('meta_query', $meta_query);
-//        }
-//        if($countSort == 1) {
-//            if($sortArray[0] == 'minprice') {
-//                $query->set('meta_key', 'post_detail_price');
-//                $query->set('orderby', 'meta_value_num');
-//                $query->set('order', 'ASC');
-//            } elseif($sortArray[0] == 'maxprice') {
-//                $query->set('meta_key', 'post_detail_price');
-//                $query->set('orderby', 'meta_value_num');
-//                $query->set('order', 'DESC');
-//            }
-//            if($sortArray[0] == 'az') {
-//                $query->set('orderby', 'title');
-//                $query->set('order', 'ASC');
-//            } elseif($sortArray[0] == 'za') {
-//                $query->set('orderby', 'title');
-//                $query->set('order', 'DESC');
-//            }
-//        }
-//        if($priceArray[0] == '0') {
-//            $meta_query[] = array(
-//                'key' => 'post_detail_price',
-//                'value' => $priceArray[1],
-//                'compare' => '<=',
-//                'type'      => 'NUMERIC',
-//            );
-//            $query->set('meta_query', $meta_query);
-//        } else {
-//            $meta_query[] = array(
-//                'key' => 'post_detail_price',
-//                'value' => $priceArray,
-//                'compare' => 'BETWEEN',
-//                'type'      => 'NUMERIC',
-//            );
-//            $query->set('meta_query', $meta_query);
-//        }
-////        print_r($query);
-//    }
-//}
-//
-//function arrayExclude($array, Array $excludeKeys){
-//    foreach($array as $key => $value){
-//        if(!in_array($key, $excludeKeys)){
-//            $return[$key] = $value;
-//        }
-//    }
-//    return $return;
-//}
-//
-//function valueQuery($v = null) {
-//    $queryGlobal = $GLOBALS['wp_query']->query;
-//    $queryGlobals = arrayExclude($queryGlobal, array('paged', 'danhmuc_sanpham'));
-//
-//    $i = 0;
-//    $url = count($queryGlobals) > 0 ? '':'?';
-//    if(!empty($queryGlobals)) {
-//        foreach($queryGlobals as $kq => $vq):
-//            $i++;
-//            $i == 1 ? $kk = '?':$kk = '';
-//            if($kq != $v) {
-//                $url .= $kk.$kq.'='.$vq.'&';
-//            } else {
-//                $url .= $kk;
-//            }
-//        endforeach;
-//    }
-//    return $url;
-//}
-//
-//function removeQuery($v = null) {
-//    $queryGlobal = $GLOBALS['wp_query']->query;
-//    $queryGlobals = arrayExclude($queryGlobal, array('paged', 'danhmuc_sanpham'));
-//    $i = 0;
-//    $url = count($queryGlobals) > 0 ? '':'';
-//    if(!empty($queryGlobals)) {
-//        foreach($queryGlobals as $kq => $vq):
-//            $i++;
-//            $i == 1 ? $kk = '?':$kk = '&';
-//            if($kq != $v) {
-//                $url .= $kk.$kq.'='.$vq;
-//            } else {
-//                $url .= $kk;
-//            }
-//        endforeach;
-//    }
-//    return $url;
-//}
-//
-//function hm_get_template_part( $file, $template_args = array(), $cache_args = array() ) {
-//    $template_args = wp_parse_args( $template_args );
-//    $cache_args = wp_parse_args( $cache_args );
-//    if ( $cache_args ) {
-//        foreach ( $template_args as $key => $value ) {
-//            if ( is_scalar( $value ) || is_array( $value ) ) {
-//                $cache_args[$key] = $value;
-//            } else if ( is_object( $value ) && method_exists( $value, 'get_id' ) ) {
-//                $cache_args[$key] = call_user_method( 'get_id', $value );
-//            }
-//        }
-//        if ( ( $cache = wp_cache_get( $file, serialize( $cache_args ) ) ) !== false ) {
-//            if ( ! empty( $template_args['return'] ) )
-//                return $cache;
-//            echo $cache;
-//            return;
-//        }
-//    }
-//    $file_handle = $file;
-//    do_action( 'start_operation', 'hm_template_part::' . $file_handle );
-//    if ( file_exists( get_stylesheet_directory() . '/' . $file . '.php' ) )
-//        $file = get_stylesheet_directory() . '/' . $file . '.php';
-//    elseif ( file_exists( get_template_directory() . '/' . $file . '.php' ) )
-//        $file = get_template_directory() . '/' . $file . '.php';
-//    ob_start();
-//    $return = require( $file );
-//    $data = ob_get_clean();
-//    do_action( 'end_operation', 'hm_template_part::' . $file_handle );
-//    if ( $cache_args ) {
-//        wp_cache_set( $file, $data, serialize( $cache_args ), 3600 );
-//    }
-//    if ( ! empty( $template_args['return'] ) )
-//        if ( $return === false )
-//            return false;
-//        else
-//            return $data;
-//    echo $data;
-//}
-//
-//
-//add_action( 'wp_ajax_nopriv_filter_taxonomy', 'filter_taxonomy' );
-//add_action( 'wp_ajax_filter_taxonomy', 'filter_taxonomy' );
-//
-//function filter_taxonomy()
-//{
-//    $material = [
-//        'pt' => 'PT',
-//        'k18' => 'K18',
-//        'k14' => 'K14',
-//        'k10' => 'K10',
-//        'sv' => 'SV',
-//    ];
-//
-//    $price = [
-//        '0-1000000' => 'Dưới 1tr',
-//        '1000000-2000000' => '1tr-2tr',
-//        '2000000-3000000' => '2tr-3tr',
-//        '3000000-4000000' => '3tr-4tr',
-//        '5000000' => 'Trên 5tr',
-//    ];
-//
-//    $color = [
-//        'ffe84f' => 'Vàng vàng',
-//        'f7f1d7' => 'Vàng trắng',
-//        'ffead8' => 'Vàng hồng',
-//        '' => 'Kết hợp màu',
-//    ];
-//
-//    $gift = [
-//        'sinh-nhat' => 'Sinh nhật',
-//        'le-tinh-nhan' => 'Lễ tình nhân',
-//        'ki-niem' => 'Kỉ niệm',
-//        'tot-nghiep' => 'Tốt nghiệp',
-//        'ngay-phu-nu' => 'Ngày phụ nữ',
-//        'du-tiec' => 'Dự tiệc',
-//        'cong-so' => 'Công sở',
-//        'tu-thuong' => 'Tự thưởng',
-//    ];
-//
-//    $sort = [
-//        'az' => 'A -> Z',
-//        'za' => 'Z -> A',
-//        'minprice' => 'Giá từ thấp tới cao',
-//        'maxprice' => 'Giá từ cao tới thấp',
-//    ];
-//
-//    $url = $_POST['url'];
-//    $slug = $_POST['slug'];
-//
-//    $url = ltrim($url, '?');
-//    $url = explode('&', $url);
-//    if(!empty($url)) {
-//
-//        $material_query = [];
-//        $price_query = [];
-//        $color_query = [];
-//        $gift_query = [];
-//        $sort_query = [];
-//
-//        foreach ($url as $u) {
-//            $url2 = explode('=', $u);
-//
-//            if($url2[0] == 'material') {
-//                if(isset($material[$url2[1]])) {
-//                    $material_query = array(
-//                        'key' => 'product_material',
-//                        'value' => $url2[1],
-//                        'compare' => 'LIKE',
-//                    );
-//                }
-//            }
-//
-//            if($url2[0] == 'price') {
-//                $priceArray = explode('-',$url2[1]);
-//                $count = count($priceArray);
-//                if(isset($price[$url2[1]])) {
-//                    if($count == 1 && (int)$priceArray[0]) {
-//                        $price_query = array(
-//                            'key' => 'post_detail_price',
-//                            'value' => (int)$priceArray[0],
-//                            'compare' => '>=',
-//                            'type'      => 'NUMERIC',
-//                        );
-//                    } elseif ($priceArray[0] == '0') {
-//                        $price_query = array(
-//                            'key' => 'post_detail_price',
-//                            'value' => $priceArray[1],
-//                            'compare' => '<=',
-//                            'type'      => 'NUMERIC',
-//                        );
-//                    } else {
-//                        $price_query = array (
-//                            'key' => 'post_detail_price',
-//                            'value' => $priceArray,
-//                            'compare' => 'BETWEEN',
-//                            'type'      => 'NUMERIC',
-//                        );
+function san_pham_func() {
+    $labels = array(
+        'name'                  => _x( 'Sản phẩm', 'Post Type General Name', 'DWEB' ),
+        'singular_name'         => _x( 'Sản phẩm', 'Post Type Singular Name', 'DWEB' ),
+        'menu_name'             => __( 'Sản phẩm', 'DWEB' ),
+        'name_admin_bar'        => __( 'Sản phẩm', 'DWEB' ),
+        'archives'              => __( 'Item Archives', 'DWEB' ),
+        'attributes'            => __( 'Item Attributes', 'DWEB' ),
+        'parent_item_colon'     => __( 'Parent Item:', 'DWEB' ),
+        'all_items'             => __( 'Tất cả sản phẩm', 'DWEB' ),
+        'add_new_item'          => __( 'Add New Item', 'DWEB' ),
+        'add_new'               => __( 'Thêm sản phẩm', 'DWEB' ),
+        'new_item'              => __( 'New Item', 'DWEB' ),
+        'edit_item'             => __( 'Edit Item', 'DWEB' ),
+        'update_item'           => __( 'Update Item', 'DWEB' ),
+        'view_item'             => __( 'View Item', 'DWEB' ),
+        'view_items'            => __( 'View Items', 'DWEB' ),
+        'search_items'          => __( 'Search Item', 'DWEB' ),
+        'not_found'             => __( 'Not found', 'DWEB' ),
+        'not_found_in_trash'    => __( 'Not found in Trash', 'DWEB' ),
+        'featured_image'        => __( 'Featured Image', 'DWEB' ),
+        'set_featured_image'    => __( 'Set featured image', 'DWEB' ),
+        'remove_featured_image' => __( 'Remove featured image', 'DWEB' ),
+        'use_featured_image'    => __( 'Use as featured image', 'DWEB' ),
+        'uploaded_to_this_item' => __( 'Uploaded to this item', 'DWEB' ),
+        'items_list'            => __( 'Items list', 'DWEB' ),
+        'items_list_navigation' => __( 'Items list navigation', 'DWEB' ),
+        'filter_items_list'     => __( 'Filter items list', 'DWEB' ),
+    );
+    $rewrite = array(
+        'slug'                  => _x('product/%danhmuc_sanpham%','slug', 'DWEB'), //Slug của trang chi tiết sản phẩm
+        'with_front'            => true,
+        'pages'                 => true,
+        'feeds'                 => true,
+    );
+    $args = array(
+        'label'                 => __( 'Sản phẩm', 'DWEB' ),
+        'description'           => __( 'Post Type Description', 'DWEB' ),
+        'labels'                => $labels,
+        'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', ),
+        'taxonomies'            => array( 'danhmuc_sanpham' ),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'menu_position'         => 20,
+        'menu_icon'             => 'dashicons-products',
+        'show_in_admin_bar'     => true,
+        'show_in_nav_menus'     => true,
+        'can_export'            => true,
+        'has_archive'           => 'product', //Đường dẫn của archive
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'rewrite'               => $rewrite,
+        'capability_type'       => 'page',
+    );
+    register_post_type( 'san_pham', $args );
+}
+add_action( 'init', 'san_pham_func', 0 );
+function danhmuc_sanpham_func() {
+    $labels = array(
+        'name'                       => _x( 'Danh mục', 'Taxonomy General Name', 'DWEB' ),
+        'singular_name'              => _x( 'Danh mục', 'Taxonomy Singular Name', 'DWEB' ),
+        'menu_name'                  => __( 'Danh mục', 'DWEB' ),
+        'all_items'                  => __( 'All Items', 'DWEB' ),
+        'parent_item'                => __( 'Parent Item', 'DWEB' ),
+        'parent_item_colon'          => __( 'Parent Item:', 'DWEB' ),
+        'new_item_name'              => __( 'New Item Name', 'DWEB' ),
+        'add_new_item'               => __( 'Add New Item', 'DWEB' ),
+        'edit_item'                  => __( 'Edit Item', 'DWEB' ),
+        'update_item'                => __( 'Update Item', 'DWEB' ),
+        'view_item'                  => __( 'View Item', 'DWEB' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'DWEB' ),
+        'add_or_remove_items'        => __( 'Add or remove items', 'DWEB' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'DWEB' ),
+        'popular_items'              => __( 'Popular Items', 'DWEB' ),
+        'search_items'               => __( 'Search Items', 'DWEB' ),
+        'not_found'                  => __( 'Not Found', 'DWEB' ),
+        'no_terms'                   => __( 'No items', 'DWEB' ),
+        'items_list'                 => __( 'Items list', 'DWEB' ),
+        'items_list_navigation'      => __( 'Items list navigation', 'DWEB' ),
+    );
+    $rewrite = array(
+        'slug'                       => _x('product','slug', 'DWEB'),
+        'with_front'                 => true,
+        'hierarchical'               => true,
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'rewrite'                    => $rewrite,
+    );
+    register_taxonomy( 'danhmuc_sanpham', array( 'san_pham' ), $args );
+}
+add_action( 'init', 'danhmuc_sanpham_func', 0 );
+
+function thuonghieu_sanpham_func() {
+    $labels = array(
+        'name'                       => _x( 'Thương hiệu', 'Taxonomy General Name', 'DWEB' ),
+        'singular_name'              => _x( 'Thương hiệu', 'Taxonomy Singular Name', 'DWEB' ),
+        'menu_name'                  => __( 'Thương hiệu', 'DWEB' ),
+        'all_items'                  => __( 'All Items', 'DWEB' ),
+        'parent_item'                => __( 'Parent Item', 'DWEB' ),
+        'parent_item_colon'          => __( 'Parent Item:', 'DWEB' ),
+        'new_item_name'              => __( 'New Item Name', 'DWEB' ),
+        'add_new_item'               => __( 'Add New Item', 'DWEB' ),
+        'edit_item'                  => __( 'Edit Item', 'DWEB' ),
+        'update_item'                => __( 'Update Item', 'DWEB' ),
+        'view_item'                  => __( 'View Item', 'DWEB' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'DWEB' ),
+        'add_or_remove_items'        => __( 'Add or remove items', 'DWEB' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'DWEB' ),
+        'popular_items'              => __( 'Popular Items', 'DWEB' ),
+        'search_items'               => __( 'Search Items', 'DWEB' ),
+        'not_found'                  => __( 'Not Found', 'DWEB' ),
+        'no_terms'                   => __( 'No items', 'DWEB' ),
+        'items_list'                 => __( 'Items list', 'DWEB' ),
+        'items_list_navigation'      => __( 'Items list navigation', 'DWEB' ),
+    );
+    $rewrite = array(
+        'slug'                       => _x('product','slug', 'DWEB'),
+        'with_front'                 => true,
+        'hierarchical'               => true,
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'rewrite'                    => $rewrite,
+    );
+    register_taxonomy( 'thuonghieu_sanpham', array( 'san_pham' ), $args );
+}
+add_action( 'init', 'thuonghieu_sanpham_func', 0 );
+
+
+function tag_sanpham_func() {
+    $labels = array(
+        'name'                       => _x( 'Thẻ', 'Taxonomy General Name', 'DWEB' ),
+        'singular_name'              => _x( 'Thẻ', 'Taxonomy Singular Name', 'DWEB' ),
+        'menu_name'                  => __( 'Thẻ', 'DWEB' ),
+        'all_items'                  => __( 'All Items', 'DWEB' ),
+        'parent_item'                => __( 'Parent Item', 'DWEB' ),
+        'parent_item_colon'          => __( 'Parent Item:', 'DWEB' ),
+        'new_item_name'              => __( 'New Item Name', 'DWEB' ),
+        'add_new_item'               => __( 'Add New Item', 'DWEB' ),
+        'edit_item'                  => __( 'Edit Item', 'DWEB' ),
+        'update_item'                => __( 'Update Item', 'DWEB' ),
+        'view_item'                  => __( 'View Item', 'DWEB' ),
+        'separate_items_with_commas' => __( 'Separate items with commas', 'DWEB' ),
+        'add_or_remove_items'        => __( 'Add or remove items', 'DWEB' ),
+        'choose_from_most_used'      => __( 'Choose from the most used', 'DWEB' ),
+        'popular_items'              => __( 'Popular Items', 'DWEB' ),
+        'search_items'               => __( 'Search Items', 'DWEB' ),
+        'not_found'                  => __( 'Not Found', 'DWEB' ),
+        'no_terms'                   => __( 'No items', 'DWEB' ),
+        'items_list'                 => __( 'Items list', 'DWEB' ),
+        'items_list_navigation'      => __( 'Items list navigation', 'DWEB' ),
+    );
+    $rewrite = array(
+        'slug'                       => _x('tags','slug', 'DWEB'),
+        'with_front'                 => true,
+        'hierarchical'               => true,
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'rewrite'                    => $rewrite,
+    );
+    register_taxonomy( 'tag_sanpham', array( 'san_pham' ), $args );
+}
+add_action( 'init', 'tag_sanpham_func', 0 );
+
+
+function dweb_cpt_product_post_type_link( $permalink, $post ) {
+    if ( 'san_pham' !== $post->post_type ) {
+        return $permalink;
+    }
+    if ( false === strpos( $permalink, '%' ) ) {
+        return $permalink;
+    }
+    $terms = get_the_terms( $post->ID, 'danhmuc_sanpham' );
+
+    if ( ! empty( $terms ) ) {
+        if ( function_exists( 'wp_list_sort' ) ) {
+            $terms = wp_list_sort( $terms, 'term_id', 'DESC' );
+        } else {
+            usort( $terms, '_usort_terms_by_ID' );
+        }
+        $category_object = apply_filters( 'dweb_cpt_product_post_type_link_product_cat', $terms[0], $terms, $post );
+        $category_object = get_term( $category_object, 'danhmuc_sanpham' );
+        $product_cat     = $category_object->slug;
+        if ( $category_object->parent ) {
+            $ancestors = get_ancestors( $category_object->term_id, 'danhmuc_sanpham' );
+//            print_r($ancestors);
+            foreach ( $ancestors as $ancestor ) {
+                $ancestor_object = get_term( $ancestor, 'danhmuc_sanpham' );
+                $product_cat     = $ancestor_object->slug . '/' . $product_cat;
+            }
+
+        }
+    } else {
+        $product_cat = _x( 'none-category', 'slug', 'devvn' );
+    }
+
+    $permalink = str_replace( '%danhmuc_sanpham%', $product_cat, $permalink );
+
+    return $permalink;
+}
+add_filter( 'post_type_link', 'dweb_cpt_product_post_type_link', 10, 2 );
+
+function dweb_cpt_product_category_base_same_shop_base( $flash = false ) {
+    $terms = get_terms(array(
+        'taxonomy' => 'danhmuc_sanpham',
+        'hide_empty' => false,
+    ));
+    if ($terms && !is_wp_error($terms)) {
+        $siteurl = esc_url(home_url('/'));
+        foreach ($terms as $term) {
+            $term_slug = $term->slug;
+            $baseterm = str_replace($siteurl, '', get_term_link($term->term_id, 'danhmuc_sanpham'));
+
+            add_rewrite_rule($baseterm . '?$','index.php?danhmuc_sanpham=' . $term_slug,'top');
+            add_rewrite_rule($baseterm . 'page/([0-9]{1,})/?$', 'index.php?danhmuc_sanpham=' . $term_slug . '&paged=$matches[1]','top');
+            add_rewrite_rule($baseterm . '(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', 'index.php?danhmuc_sanpham=' . $term_slug . '&feed=$matches[1]','top');
+        }
+    }
+    if ($flash == true)
+        flush_rewrite_rules(false);
+}
+add_filter( 'init', 'dweb_cpt_product_category_base_same_shop_base');
+
+function na_remove_slug( $post_link, $post, $leavename ) {
+
+    if ( 'san_pham' != $post->post_type ||  'publish' != $post->post_status ) {
+        return $post_link;
+    }
+
+    $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+    return $post_link;
+}
+add_filter( 'post_type_link', 'na_remove_slug', 10, 3 );
+
+function na_parse_request( $query ) {
+
+    if ( ! $query->is_main_query() || 2 != count( $query->query ) || ! isset( $query->query['page'] ) ) {
+        return;
+    }
+    if ( ! empty( $query->query['name'] ) ) {
+        $query->set( 'post_type', array( 'post', 'san_pham', 'page' ) );
+    }
+}
+add_action( 'pre_get_posts', 'na_parse_request' );
+
+
+function devvn_remove_slug( $post_link, $post ) {
+    if ( !in_array( get_post_type($post), array( 'san_pham' ) ) || 'publish' != $post->post_status ) {
+        return $post_link;
+    }
+    if('san_pham' == $post->post_type){
+        $post_link = str_replace( '/product/', '/', $post_link ); //Thay cua-hang bằng slug hiện tại của bạn
+    } else {
+        $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+    }
+
+    return $post_link;
+}
+add_filter( 'post_type_link', 'devvn_remove_slug', 10, 2 );
+function devvn_woo_product_rewrite_rules($flash = false) {
+    global $wp_post_types, $wpdb, $wp;
+    $siteLink = esc_url(home_url('/'));
+    foreach ($wp_post_types as $type=>$custom_post) {
+        if($type == 'san_pham'){
+            if ($custom_post->_builtin == false) {
+                $querystr = "SELECT {$wpdb->posts}.post_name, {$wpdb->posts}.ID
+                            FROM {$wpdb->posts}
+                            WHERE {$wpdb->posts}.post_status = 'publish'
+                            AND {$wpdb->posts}.post_type = '{$type}'";
+                $posts = $wpdb->get_results($querystr, OBJECT);
+                foreach ($posts as $post) {
+                    $current_slug = get_permalink($post->ID);
+                    $base_product = str_replace($siteLink,'',$current_slug);
+
+
+                    $currentUrl = array_reverse(explode('/', $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'/'));
+                    $baseUrl = array_reverse(explode('/', $base_product));
+
+                    add_rewrite_rule($base_product.'?$', "index.php?{$custom_post->query_var}={$post->post_name}", 'top');
+                    add_rewrite_rule($base_product.'comment-page-([0-9]{1,})/?$', 'index.php?'.$custom_post->query_var.'='.$post->post_name.'&cpage=$matches[1]', 'top');
+                    add_rewrite_rule($base_product.'(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', 'index.php?'.$custom_post->query_var.'='.$post->post_name.'&feed=$matches[1]','top');
+                }
+            }
+        }
+    }
+    if ($flash == true)
+        flush_rewrite_rules(false);
+}
+add_action('init', 'devvn_woo_product_rewrite_rules');
+function devvn_woo_new_product_post_save($post_id){
+    global $wp_post_types;
+    $post_type = get_post_type($post_id);
+    foreach ($wp_post_types as $type=>$custom_post) {
+        if ($custom_post->_builtin == false && $type == $post_type) {
+            devvn_woo_product_rewrite_rules(true);
+        }
+    }
+}
+add_action('wp_insert_post', 'devvn_woo_new_product_post_save');
+
+add_filter( 'term_link', 'devvn_product_cat_permalink', 10, 3 );
+function devvn_product_cat_permalink( $url, $term, $taxonomy ){
+    switch ($taxonomy):
+        case 'danhmuc_sanpham':
+            $taxonomy_slug = 'product'; //Thay bằng slug hiện tại của bạn. Mặc định là product-category
+            if(strpos($url, $taxonomy_slug) === FALSE) break;
+            $url = str_replace('/' . $taxonomy_slug, '', $url);
+            break;
+        case 'thuonghieu_sanpham':
+            $taxonomy_slug = 'product'; //Thay bằng slug hiện tại của bạn. Mặc định là product-category
+            if(strpos($url, $taxonomy_slug) === FALSE) break;
+            $url = str_replace('/' . $taxonomy_slug, '', $url);
+            break;
+    endswitch;
+    return $url;
+}
+function devvn_product_category_rewrite_rules($flash = false) {
+    $terms = get_terms( array(
+        'taxonomy' => 'danhmuc_sanpham',
+        'post_type' => 'san_pham',
+        'hide_empty' => false,
+    ));
+    if($terms && !is_wp_error($terms)){
+        $siteurl = esc_url(home_url('/'));
+        foreach ($terms as $term) {
+            $term_slug = $term->slug;
+            $baseterm = str_replace($siteurl,'',get_term_link($term->term_id,'danhmuc_sanpham'));
+//            $baseterm = rtrim($baseterm, '/');
+//            echo $baseterm;
+//            echo '<br/>';
+
+            add_rewrite_rule($baseterm.'?$','index.php?danhmuc_sanpham='.$term_slug,'top');
+            add_rewrite_rule($baseterm.'page/([0-9]{1,})/?$', 'index.php?danhmuc_sanpham='.$term_slug.'&paged=$matches[1]','top');
+////            add_rewrite_rule($baseterm.'?price/([0-9a-z-]{1,})?$', 'index.php?danhmuc_sanpham='.$term_slug.'&price=$matches[1]','top');
+////            add_rewrite_rule($baseterm.'?color/([0-9-]{1,})?$', 'index.php?danhmuc_sanpham='.$term_slug.'&color=$matches[1]','top');
+////            add_rewrite_rule($baseterm.'?color/([0-9-]{1,})?$', 'index.php?danhmuc_sanpham='.$term_slug.'&color=$matches[1]','top');
+////            add_rewrite_rule($baseterm.'filter/?price=([0-9a-z-]{1,})&color=([0-9-]{1,})?$', 'index.php?danhmuc_sanpham='.$term_slug.'&price=$matches[1]&color=$matches[2]','top');
+//            add_rewrite_rule($baseterm.'filter/([0-9a-z-]{1,})/page/([0-9]{1,})/?$', 'index.php?danhmuc_sanpham='.$term_slug.'&price=$matches[1]&paged=$matches[2]','top');
+            add_rewrite_rule($baseterm.'(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', 'index.php?product_cat='.$term_slug.'&feed=$matches[1]','top');
+
+        }
+    }
+    if ($flash == true)
+        flush_rewrite_rules(false);
+}
+add_action('init', 'devvn_product_category_rewrite_rules');
+add_action( 'create_term', 'devvn_new_product_cat_edit_success', 10, 2 );
+function devvn_new_product_cat_edit_success( $term_id, $taxonomy ) {
+    devvn_product_category_rewrite_rules(true);
+}
+function devvn_product_brand_rewrite_rules($flash = false) {
+
+    $terms = get_terms( array(
+        'taxonomy' => 'thuonghieu_sanpham',
+        'post_type' => 'san_pham',
+        'hide_empty' => false,
+    ));
+
+    if($terms && !is_wp_error($terms)){
+        $siteurl = esc_url(home_url('/'));
+        foreach ($terms as $term) {
+            $term_slug = $term->slug;
+            $baseterm = str_replace($siteurl,'',get_term_link($term->term_id,'thuonghieu_sanpham'));
+
+            add_rewrite_rule($baseterm.'?$','index.php?thuonghieu_sanpham='.$term_slug,'top');
+            add_rewrite_rule($baseterm.'page/([0-9]{1,})/?$', 'index.php?thuonghieu_sanpham='.$term_slug.'&paged=$matches[1]','top');
+            add_rewrite_rule($baseterm.'filter/([0-9a-z-]{1,})/([0-9]{1,})/?$', 'index.php?thuonghieu_sanpham='.$term_slug.'&price=$matches[1]','top');
+            add_rewrite_rule($baseterm.'filter/([0-9a-z-]{1,})/page/([0-9]{1,})/?$', 'index.php?thuonghieu_sanpham='.$term_slug.'&price=$matches[1]&paged=$matches[2]','top');
+            add_rewrite_rule($baseterm.'(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', 'index.php?product_cat='.$term_slug.'&feed=$matches[1]','top');
+        }
+    }
+
+    if ($flash == true)
+        flush_rewrite_rules(false);
+}
+add_action('init', 'devvn_product_brand_rewrite_rules');
+add_action( 'create_term', 'devvn_new_product_brand_edit_success', 10, 2 );
+function devvn_new_product_brand_edit_success( $term_id, $taxonomy ) {
+    devvn_product_brand_rewrite_rules(true);
+}
+
+
+function devvn_product_tag_rewrite_rules($flash = false) {
+    $terms = get_terms( array(
+        'taxonomy' => 'tag_sanpham',
+        'post_type' => 'san_pham',
+        'hide_empty' => false,
+    ));
+    if($terms && !is_wp_error($terms)){
+        $siteurl = esc_url(home_url('/'));
+        foreach ($terms as $term) {
+            $term_slug = $term->slug;
+            $baseterm = str_replace($siteurl,'',get_term_link($term->term_id,'tag_sanpham'));
+            add_rewrite_rule($baseterm.'?$','index.php?tag_sanpham='.$term_slug,'top');
+            add_rewrite_rule($baseterm.'page/([0-9]{1,})/?$', 'index.php?tag_sanpham='.$term_slug.'&paged=$matches[1]','top');
+            add_rewrite_rule($baseterm.'([0-9a-z-]{1,})?$', 'index.php?tag_sanpham='.$term_slug.'&price=$matches[1]','top');
+            add_rewrite_rule($baseterm.'([0-9a-z-]{1,})/page/([0-9]{1,})/?$', 'index.php?tag_sanpham='.$term_slug.'&price=$matches[1]&paged=$matches[2]','top');
+            add_rewrite_rule($baseterm.'(?:feed/)?(feed|rdf|rss|rss2|atom)/?$', 'index.php?product_cat='.$term_slug.'&feed=$matches[1]','top');
+        }
+    }
+    if ($flash == true)
+        flush_rewrite_rules(false);
+}
+add_action('init', 'devvn_product_tag_rewrite_rules');
+add_action( 'create_term', 'devvn_new_product_tag_edit_success', 10, 2 );
+function devvn_new_product_tag_edit_success( $term_id, $taxonomy ) {
+    devvn_product_tag_rewrite_rules(true);
+}
+
+function add_slug( $query_var ) {
+    $query_var[] = 'paged';
+    $query_var[] = 'price';
+    $query_var[] = 'size';
+    $query_var[] = 'color';
+    $query_var[] = 'sort';
+    $query_var[] = 'material';
+    $query_var[] = 'gift';
+    return $query_var;
+}
+add_filter( 'query_vars', 'add_slug' );
+
+add_action( 'pre_get_posts', 'price_search_filter');
+
+function price_search_filter( $query ) {
+    if ((!is_admin() && is_tax('danhmuc_sanpham') && $query->is_main_query()) || (!is_admin() && is_tax('thuonghieu_sanpham') && $query->is_main_query()) ) {
+
+        $price = get_query_var('price');
+        $sort = get_query_var('sort');
+        $size = get_query_var('size');
+        $material = get_query_var('material');
+        $color = get_query_var('color');
+        $gift = get_query_var('gift');
+
+        $priceArray = explode('-',$price);
+        $count = count($priceArray);
+
+        $sortArray = explode('-',$sort);
+        $countSort = count($sortArray);
+
+        if($gift) {
+            $meta_query[] = array(
+                'key' => 'product_gift',
+                'value' => $gift,
+                'compare' => 'LIKE',
+            );
+            $query->set('meta_query', $meta_query);
+        }
+
+        if($color) {
+            $meta_query[] = array(
+                'key' => 'product_color',
+                'value' => $color,
+                'compare' => 'LIKE',
+            );
+            $query->set('meta_query', $meta_query);
+        }
+
+        if($size) {
+            $meta_query[] = array(
+                'key' => 'product_size',
+                'value' => $size,
+                'compare' => 'LIKE',
+            );
+            $query->set('meta_query', $meta_query);
+        }
+
+        if($material) {
+            $meta_query[] = array(
+                'key' => 'product_material',
+                'value' => $material,
+                'compare' => 'LIKE',
+            );
+            $query->set('meta_query', $meta_query);
+        }
+
+        if($count == 1 && (int)$priceArray[0]) {
+            $meta_query[] = array(
+                'key' => 'post_detail_price',
+                'value' => (int)$priceArray[0],
+                'compare' => '>=',
+                'type'      => 'NUMERIC',
+            );
+            $query->set('meta_query', $meta_query);
+        }
+        if($countSort == 1) {
+            if($sortArray[0] == 'minprice') {
+                $query->set('meta_key', 'post_detail_price');
+                $query->set('orderby', 'meta_value_num');
+                $query->set('order', 'ASC');
+            } elseif($sortArray[0] == 'maxprice') {
+                $query->set('meta_key', 'post_detail_price');
+                $query->set('orderby', 'meta_value_num');
+                $query->set('order', 'DESC');
+            }
+            if($sortArray[0] == 'az') {
+                $query->set('orderby', 'title');
+                $query->set('order', 'ASC');
+            } elseif($sortArray[0] == 'za') {
+                $query->set('orderby', 'title');
+                $query->set('order', 'DESC');
+            }
+        }
+        if($priceArray[0] == '0') {
+            $meta_query[] = array(
+                'key' => 'post_detail_price',
+                'value' => $priceArray[1],
+                'compare' => '<=',
+                'type'      => 'NUMERIC',
+            );
+            $query->set('meta_query', $meta_query);
+        } else {
+            $meta_query[] = array(
+                'key' => 'post_detail_price',
+                'value' => $priceArray,
+                'compare' => 'BETWEEN',
+                'type'      => 'NUMERIC',
+            );
+            $query->set('meta_query', $meta_query);
+        }
+//        print_r($query);
+    }
+}
+
+function arrayExclude($array, Array $excludeKeys){
+    foreach($array as $key => $value){
+        if(!in_array($key, $excludeKeys)){
+            $return[$key] = $value;
+        }
+    }
+    return $return;
+}
+
+function valueQuery($v = null) {
+    $queryGlobal = $GLOBALS['wp_query']->query;
+    $queryGlobals = arrayExclude($queryGlobal, array('paged', 'danhmuc_sanpham'));
+
+    $i = 0;
+    $url = count($queryGlobals) > 0 ? '':'?';
+    if(!empty($queryGlobals)) {
+        foreach($queryGlobals as $kq => $vq):
+            $i++;
+            $i == 1 ? $kk = '?':$kk = '';
+            if($kq != $v) {
+                $url .= $kk.$kq.'='.$vq.'&';
+            } else {
+                $url .= $kk;
+            }
+        endforeach;
+    }
+    return $url;
+}
+
+function removeQuery($v = null) {
+    $queryGlobal = $GLOBALS['wp_query']->query;
+    $queryGlobals = arrayExclude($queryGlobal, array('paged', 'danhmuc_sanpham'));
+    $i = 0;
+    $url = count($queryGlobals) > 0 ? '':'';
+    if(!empty($queryGlobals)) {
+        foreach($queryGlobals as $kq => $vq):
+            $i++;
+            $i == 1 ? $kk = '?':$kk = '&';
+            if($kq != $v) {
+                $url .= $kk.$kq.'='.$vq;
+            } else {
+                $url .= $kk;
+            }
+        endforeach;
+    }
+    return $url;
+}
+
+function hm_get_template_part( $file, $template_args = array(), $cache_args = array() ) {
+    $template_args = wp_parse_args( $template_args );
+    $cache_args = wp_parse_args( $cache_args );
+    if ( $cache_args ) {
+        foreach ( $template_args as $key => $value ) {
+            if ( is_scalar( $value ) || is_array( $value ) ) {
+                $cache_args[$key] = $value;
+            } else if ( is_object( $value ) && method_exists( $value, 'get_id' ) ) {
+                $cache_args[$key] = call_user_method( 'get_id', $value );
+            }
+        }
+        if ( ( $cache = wp_cache_get( $file, serialize( $cache_args ) ) ) !== false ) {
+            if ( ! empty( $template_args['return'] ) )
+                return $cache;
+            echo $cache;
+            return;
+        }
+    }
+    $file_handle = $file;
+    do_action( 'start_operation', 'hm_template_part::' . $file_handle );
+    if ( file_exists( get_stylesheet_directory() . '/' . $file . '.php' ) )
+        $file = get_stylesheet_directory() . '/' . $file . '.php';
+    elseif ( file_exists( get_template_directory() . '/' . $file . '.php' ) )
+        $file = get_template_directory() . '/' . $file . '.php';
+    ob_start();
+    $return = require( $file );
+    $data = ob_get_clean();
+    do_action( 'end_operation', 'hm_template_part::' . $file_handle );
+    if ( $cache_args ) {
+        wp_cache_set( $file, $data, serialize( $cache_args ), 3600 );
+    }
+    if ( ! empty( $template_args['return'] ) )
+        if ( $return === false )
+            return false;
+        else
+            return $data;
+    echo $data;
+}
+
+
+add_action( 'wp_ajax_nopriv_filter_taxonomy', 'filter_taxonomy' );
+add_action( 'wp_ajax_filter_taxonomy', 'filter_taxonomy' );
+
+function filter_taxonomy()
+{
+    $material = [
+        'pt' => 'PT',
+        'k18' => 'K18',
+        'k14' => 'K14',
+        'k10' => 'K10',
+        'sv' => 'SV',
+    ];
+
+    $price = [
+        '0-1000000' => 'Dưới 1tr',
+        '1000000-2000000' => '1tr-2tr',
+        '2000000-3000000' => '2tr-3tr',
+        '3000000-4000000' => '3tr-4tr',
+        '5000000' => 'Trên 5tr',
+    ];
+
+    $color = [
+        'ffe84f' => 'Vàng vàng',
+        'f7f1d7' => 'Vàng trắng',
+        'ffead8' => 'Vàng hồng',
+        '' => 'Kết hợp màu',
+    ];
+
+    $gift = [
+        'sinh-nhat' => 'Sinh nhật',
+        'le-tinh-nhan' => 'Lễ tình nhân',
+        'ki-niem' => 'Kỉ niệm',
+        'tot-nghiep' => 'Tốt nghiệp',
+        'ngay-phu-nu' => 'Ngày phụ nữ',
+        'du-tiec' => 'Dự tiệc',
+        'cong-so' => 'Công sở',
+        'tu-thuong' => 'Tự thưởng',
+    ];
+
+    $sort = [
+        'az' => 'A -> Z',
+        'za' => 'Z -> A',
+        'minprice' => 'Giá từ thấp tới cao',
+        'maxprice' => 'Giá từ cao tới thấp',
+    ];
+
+    $url = $_POST['url'];
+    $slug = $_POST['slug'];
+
+    $url = ltrim($url, '?');
+    $url = explode('&', $url);
+    if(!empty($url)) {
+
+        $material_query = [];
+        $price_query = [];
+        $color_query = [];
+        $gift_query = [];
+        $sort_query = [];
+
+        foreach ($url as $u) {
+            $url2 = explode('=', $u);
+
+            if($url2[0] == 'material') {
+                if(isset($material[$url2[1]])) {
+                    $material_query = array(
+                        'key' => 'product_material',
+                        'value' => $url2[1],
+                        'compare' => 'LIKE',
+                    );
+                }
+            }
+
+            if($url2[0] == 'price') {
+                $priceArray = explode('-',$url2[1]);
+                $count = count($priceArray);
+                if(isset($price[$url2[1]])) {
+                    if($count == 1 && (int)$priceArray[0]) {
+                        $price_query = array(
+                            'key' => 'post_detail_price',
+                            'value' => (int)$priceArray[0],
+                            'compare' => '>=',
+                            'type'      => 'NUMERIC',
+                        );
+                    } elseif ($priceArray[0] == '0') {
+                        $price_query = array(
+                            'key' => 'post_detail_price',
+                            'value' => $priceArray[1],
+                            'compare' => '<=',
+                            'type'      => 'NUMERIC',
+                        );
+                    } else {
+                        $price_query = array (
+                            'key' => 'post_detail_price',
+                            'value' => $priceArray,
+                            'compare' => 'BETWEEN',
+                            'type'      => 'NUMERIC',
+                        );
+                    }
+
+                }
+            }
+            if($url2[0] == 'gift') {
+                $gift_query = array(
+                    'key' => 'product_gift',
+                    'value' => $url2[1],
+                    'compare' => 'LIKE',
+                );
+            }
+            if($url2[0] == 'sort') {
+                $sortArray = explode('-',$url2[1]);
+                $countSort = count($sortArray);
+
+//                if($countSort == 1) {
+//                    if($sortArray[0] == 'minprice') {
+//                        $query->set('meta_key', 'post_detail_price');
+//                        $query->set('orderby', 'meta_value_num');
+//                        $query->set('order', 'ASC');
+//                    } elseif($sortArray[0] == 'maxprice') {
+//                        $query->set('meta_key', 'post_detail_price');
+//                        $query->set('orderby', 'meta_value_num');
+//                        $query->set('order', 'DESC');
 //                    }
-//
+//                    if($sortArray[0] == 'az') {
+//                        $query->set('orderby', 'title');
+//                        $query->set('order', 'ASC');
+//                    } elseif($sortArray[0] == 'za') {
+//                        $query->set('orderby', 'title');
+//                        $query->set('order', 'DESC');
+//                    }
 //                }
-//            }
-//            if($url2[0] == 'gift') {
-//                $gift_query = array(
-//                    'key' => 'product_gift',
-//                    'value' => $url2[1],
-//                    'compare' => 'LIKE',
-//                );
-//            }
-//            if($url2[0] == 'sort') {
-//                $sortArray = explode('-',$url2[1]);
-//                $countSort = count($sortArray);
-//
-////                if($countSort == 1) {
-////                    if($sortArray[0] == 'minprice') {
-////                        $query->set('meta_key', 'post_detail_price');
-////                        $query->set('orderby', 'meta_value_num');
-////                        $query->set('order', 'ASC');
-////                    } elseif($sortArray[0] == 'maxprice') {
-////                        $query->set('meta_key', 'post_detail_price');
-////                        $query->set('orderby', 'meta_value_num');
-////                        $query->set('order', 'DESC');
-////                    }
-////                    if($sortArray[0] == 'az') {
-////                        $query->set('orderby', 'title');
-////                        $query->set('order', 'ASC');
-////                    } elseif($sortArray[0] == 'za') {
-////                        $query->set('orderby', 'title');
-////                        $query->set('order', 'DESC');
-////                    }
-////                }
-//            }
-//            if($url2[0] == 'color') {
-//                $color_query = array(
-//                    'key' => 'product_color',
-//                    'value' => $url2[1],
-//                    'compare' => 'LIKE',
-//                );
-//            }
-//        }
-//
-//        $rd_args = array (
-//            'post_type' => 'san_pham',
-//            'tax_query' => array(
-//                array(
-//                    'taxonomy' => 'danhmuc_sanpham',
-//                    'field'    => 'slug',
-//                    'terms'    => $slug,
-//                ),
-//            ),
-//            'meta_query' => array (
-//                'relation' => 'AND',
-//                $material_query,
-//                $price_query,
-//                $gift_query,
-////                $color_query
-//            )
-//        );
-//
-//
-//        $term = get_term_by('slug', $slug, 'danhmuc_sanpham');
-//        hm_get_template_part('template-product-filter', ['query_filter' => $rd_args, 'term' => $term]);
-//    }
-//
-//    exit();
-//};
-//
-//add_action('restrict_manage_posts', 'tsm_filter_post_type_by_taxonomy');
-//function tsm_filter_post_type_by_taxonomy() {
-//    global $typenow;
-//    $post_type = 'san_pham'; // change to your post type
-//    $taxonomy  = 'danhmuc_sanpham'; // change to your taxonomy
-//    if ($typenow == $post_type) {
-//        $selected      = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
-//        $info_taxonomy = get_taxonomy($taxonomy);
-//        wp_dropdown_categories(array(
-//            'show_option_all' => __("Show All {$info_taxonomy->label}"),
-//            'taxonomy'        => $taxonomy,
-//            'name'            => $taxonomy,
-//            'orderby'         => 'name',
-//            'selected'        => $selected,
-//            'show_count'      => true,
-//            'hide_empty'      => true,
-//        ));
-//    };
-//}
-//
-//add_filter('parse_query', 'tsm_convert_id_to_term_in_query');
-//function tsm_convert_id_to_term_in_query($query) {
-//    global $pagenow;
-//    $post_type = 'san_pham'; // change to your post type
-//    $taxonomy  = 'danhmuc_sanpham'; // change to your taxonomy
-//    $q_vars    = &$query->query_vars;
-//    if ( $pagenow == 'edit.php' && isset($q_vars['post_type']) && $q_vars['post_type'] == $post_type && isset($q_vars[$taxonomy]) && is_numeric($q_vars[$taxonomy]) && $q_vars[$taxonomy] != 0 ) {
-//        $term = get_term_by('id', $q_vars[$taxonomy], $taxonomy);
-//        $q_vars[$taxonomy] = $term->slug;
-//    }
-//}
+            }
+            if($url2[0] == 'color') {
+                $color_query = array(
+                    'key' => 'product_color',
+                    'value' => $url2[1],
+                    'compare' => 'LIKE',
+                );
+            }
+        }
+
+        $rd_args = array (
+            'post_type' => 'san_pham',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'danhmuc_sanpham',
+                    'field'    => 'slug',
+                    'terms'    => $slug,
+                ),
+            ),
+            'meta_query' => array (
+                'relation' => 'AND',
+                $material_query,
+                $price_query,
+                $gift_query,
+//                $color_query
+            )
+        );
 
 
-//function fix_slash( $string, $type ) {
-//    global $wp_rewrite;
-//    if ( $wp_rewrite->use_trailing_slashes == false ) {
-//        if ( $type != 'single' && $type != 'category' )
-//            return trailingslashit( $string );
-//
-//        if ( $type == 'single' && ( strpos( $string, '.html/' ) !== false ) )
-//            return trailingslashit( $string );
-//
-//        if ( $type == 'category' && ( strpos( $string, 'category' ) !== false ) ){
-//            $aa_g = str_replace( "/category/", "/", $string );
-//            return trailingslashit( $aa_g );
-//        }
-//        if ( $type == 'category' )
-//            return trailingslashit( $string );
-//    }
-//    return $string;
-//}
-//
-//add_filter( 'user_trailingslashit', 'fix_slash', 55, 2 );
+        $term = get_term_by('slug', $slug, 'danhmuc_sanpham');
+        hm_get_template_part('template-product-filter', ['query_filter' => $rd_args, 'term' => $term]);
+    }
+
+    exit();
+};
+
+add_action('restrict_manage_posts', 'tsm_filter_post_type_by_taxonomy');
+function tsm_filter_post_type_by_taxonomy() {
+    global $typenow;
+    $post_type = 'san_pham'; // change to your post type
+    $taxonomy  = 'danhmuc_sanpham'; // change to your taxonomy
+    if ($typenow == $post_type) {
+        $selected      = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
+        $info_taxonomy = get_taxonomy($taxonomy);
+        wp_dropdown_categories(array(
+            'show_option_all' => __("Show All {$info_taxonomy->label}"),
+            'taxonomy'        => $taxonomy,
+            'name'            => $taxonomy,
+            'orderby'         => 'name',
+            'selected'        => $selected,
+            'show_count'      => true,
+            'hide_empty'      => true,
+        ));
+    };
+}
+
+add_filter('parse_query', 'tsm_convert_id_to_term_in_query');
+function tsm_convert_id_to_term_in_query($query) {
+    global $pagenow;
+    $post_type = 'san_pham'; // change to your post type
+    $taxonomy  = 'danhmuc_sanpham'; // change to your taxonomy
+    $q_vars    = &$query->query_vars;
+    if ( $pagenow == 'edit.php' && isset($q_vars['post_type']) && $q_vars['post_type'] == $post_type && isset($q_vars[$taxonomy]) && is_numeric($q_vars[$taxonomy]) && $q_vars[$taxonomy] != 0 ) {
+        $term = get_term_by('id', $q_vars[$taxonomy], $taxonomy);
+        $q_vars[$taxonomy] = $term->slug;
+    }
+}
+
+
+function fix_slash( $string, $type ) {
+    global $wp_rewrite;
+    if ( $wp_rewrite->use_trailing_slashes == false ) {
+        if ( $type != 'single' && $type != 'category' )
+            return trailingslashit( $string );
+
+        if ( $type == 'single' && ( strpos( $string, '.html/' ) !== false ) )
+            return trailingslashit( $string );
+
+        if ( $type == 'category' && ( strpos( $string, 'category' ) !== false ) ){
+            $aa_g = str_replace( "/category/", "/", $string );
+            return trailingslashit( $aa_g );
+        }
+        if ( $type == 'category' )
+            return trailingslashit( $string );
+    }
+    return $string;
+}
+
+add_filter( 'user_trailingslashit', 'fix_slash', 55, 2 );
 
 add_action('pre_get_posts', 'wpse161279_ignore_sticky_posts');
 function wpse161279_ignore_sticky_posts($query) {
